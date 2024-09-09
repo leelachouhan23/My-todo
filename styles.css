@@ -1,0 +1,362 @@
+/* styles.css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li .button-container {
+    display: flex;
+    margin-left: auto;
+}
+
+li .button-container button {
+    margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    input {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+} */
+
+
+
+body {
+    background-image: url('https://image.slidesdocs.com/responsive-images/background/rendered-to-do-list-with-pencil-and-time-indicator-for-business-checklists-powerpoint-background_1587abfa25__960_540.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(to right, #d2ddff, #9ffcec); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+ }
+ 
+ 
+ .todo-container {
+    background-image: url('https://media.lordicon.com/icons/wired/gradient/47-to-do-list.gif');
+    background-size: cover;
+    background-position: center; 
+    border: 2px solid rgb(168, 59, 59);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+ }
+ 
+ 
+ h1 {
+    font-size: 40px;
+    color: #642828;
+ }
+ 
+ 
+ .input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+ }
+ 
+ 
+ .task-input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ff7f50;
+    border-radius: 10px;
+    outline: none;
+ }
+ 
+ 
+ .add-btn {
+    padding: 10px;
+    background-color: #e1391b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+ }
+ 
+ 
+ .add-btn:hover {
+    background-color: #ff4500;
+ }
+ 
+ 
+ /* Task List Styling */
+ .task-list {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+ }
+ 
+ 
+ .task-item {
+    background-color: #fffaf0;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ec5d5d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+ }
+ 
+ 
+ .task-item.completed {
+    background-color: #a9d8b4;
+    text-decoration: line-through;
+ }
+ 
+ 
+ .delete-btn, .edit-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+ }
+ 
+ 
+ .delete-btn:hover, .edit-btn:hover {
+    background-color: #ff6347;
+ }
+ 
+ 
+ .checkbox {
+    margin-right: 10px;
+ }
+ 
+ 
+ /* Summary & Celebration */
+ .task-summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+ }
+ 
+ 
+ .celebration {
+    font-size: 20px;
+    color: #19037c;
+    animation: shiny-flash 2s infinite;
+ }
+ 
+ 
+ .hidden {
+    display: none;
+ }
+ 
+ 
+ @keyframes shiny-flash {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+ }
+ 
+ 
+ @media (max-width: 500px) {
+    .input-container {
+        flex-direction: column;
+    }
+ 
+ 
+    .task-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+ 
+ 
+    .add-btn {
+        width: 100%;
+    }
+ }
+ 
+ 
+ 
+ 
+ @media (max-width: 375px) {
+ 
+ 
+    .todo-container{
+        margin: 20px;
+    }
+ 
+ 
+    .input-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+ 
+ 
+    .task-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+ 
+ 
+    .add-btn {
+        width: 100%;
+    }
+ }
+ 
+ 
+ 
+ 
+ @media (max-width: 390px) and (max-width:501px){
+ 
+ 
+    .todo-container{
+        margin: 20px;
+    }
+ 
+ 
+    .input-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+ 
+ 
+    .task-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+ 
+ 
+    .add-btn {
+        width: 100%;
+    }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ @media (max-width: 430px) and (max-width:501px){
+ 
+ 
+    .todo-container{
+        margin: 20px;
+    }
+ 
+ 
+    .input-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+ 
+ 
+    .task-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+ 
+ 
+    .add-btn {
+        width: 100%;
+    }
+ }
+ 
+ 
+ 
